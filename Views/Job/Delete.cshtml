@@ -1,0 +1,69 @@
+@model BrahmaServer.Models.Job
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Job</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiftLength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShiftLength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactID1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactID1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactID2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactID2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactID3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactID3)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
